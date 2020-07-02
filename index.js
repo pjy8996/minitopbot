@@ -52,8 +52,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '!트위치') {
+    return message.reply('https://www.twitch.tv/minltop');
   }
 
   if(message.content == '!유튜브') {
@@ -114,6 +114,8 @@ client.on('message', (message) => {
     let helpImg = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let commandList = [
       {name: '!청소', desc: '텍스트 지움'},
+      {name: '!유튜브', desc: '미니탑 유튜브 링크'},
+      {name: '!트위치', desc: '미니탑 트위치 링크'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
