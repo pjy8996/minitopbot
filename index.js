@@ -104,21 +104,6 @@ client.on('message', (message) => {
       .setTimestamp()
       .setFooter('EMBED', img)
 
-  if(message.content == '!민탑') {
-    let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
-    let embed = new Discord.RichEmbed()
-      .setTitle('minitop YouTuBe')
-      .setURL('https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA')
-      .setAuthor('minitop', img, 'http://www.navehttps://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAAr.com')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('유튜브', 'https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA')
-      .addField('트위치', 'https://www.twitch.tv/minltop', true)
-      .addField('디스코드', 'https://discord.com/invite/VmcS8tT', true)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('MINITOP YOUTUBE', img)
-
     message.channel.send(embed)
   } else if(message.content == '!도움') {
     let helpImg = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
@@ -237,7 +222,6 @@ client.on('message', (message) => {
         .catch(console.error)
     }
   }
-} 
 });
 
 function checkPermission(message) {
