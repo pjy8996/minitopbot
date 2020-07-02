@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 
-  let state_list = ['!도움 을 쳐보세요!','정상작동','MINITOP youtube','https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA',]
+  let state_list = ['!도움','정상작동','MINITOP youtube','https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA',]
   let state_list_index = 1;
   let change_delay = 3000; 
 
@@ -106,7 +106,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '!도움') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let helpImg = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let commandList = [
       {name: '!청소', desc: '텍스트 지움'},
     ];
