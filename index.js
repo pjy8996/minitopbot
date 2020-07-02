@@ -101,7 +101,7 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .addField('미니탑')
-      .addField('내용 1', '내용 1', true)
+      .addField('유튜브', 'https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA', true)
       .addField('내용 2', '내용 2', true)
       .addField('내용 3', '내용 3', true)
       .addBlankField()
