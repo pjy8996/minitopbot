@@ -90,6 +90,7 @@ client.on('message', (message) => {
   if(message.content == 'embed') {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     let embed = new Discord.RichEmbed()
+    let youtube = 'https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA'
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
       .setAuthor('나긋해', img, 'http://www.naver.com')
@@ -97,13 +98,24 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('Inline field title')
       .setURL('http://www.naver.com')
-      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', '링크', youtube, true)
       .addField('Inline field title', 'Some value here', true)
       .addField('Inline field title', 'Some value here', true)
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('EMBED', img)
+
+  if(message.content == '!유튜브') {
+    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let embed = new Discord.RichEmbed()
+      .setTitle('minitop YouTuBe')
+      .setURL('https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA')
+      .setAuthor('링크 (Link)', img, 'https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('YouTuBe', img)
+  }
 
     message.channel.send(embed)
   } else if(message.content == '!도움') {
