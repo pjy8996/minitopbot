@@ -257,8 +257,4 @@ async function AutoMsgDelete(message, str, delay = 3000) {
   }, delay);
 }
 
-if(message.content == '!트위치') {
-  return message.reply('https://www.twitch.tv/minltop');
-}
-
 client.login(token);
