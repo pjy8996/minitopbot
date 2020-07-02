@@ -96,6 +96,7 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title')
+      .setURL('http://www.naver.com')
       .addField('Inline field title', 'Some value here', true)
       .addField('Inline field title', 'Some value here', true)
       .addField('Inline field title', 'Some value here', true)
