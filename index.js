@@ -104,7 +104,6 @@ client.on('message', (message) => {
       .addField('내용 1', '내용 1', true)
       .addField('내용 2', '내용 2', true)
       .addField('내용 3', '내용 3', true)
-      .addField('내용 4', '내용 4', true)
       .addBlankField()
       .setTimestamp()
       .setFooter('MINITOP DISCORD BOT', img)
