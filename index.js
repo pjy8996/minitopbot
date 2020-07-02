@@ -58,7 +58,7 @@ client.on('message', (message) => {
 
   if(message.content == '!system') {
     let embed = new Discord.RichEmbed()
-    let img = 'https://cdn.discordapp.com/attachments/704981754116833340/715941524751384707/download20200504193638.png';
+    let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
     embed.setAuthor('minitop BOT 시스템 사용량', img)
