@@ -14,7 +14,7 @@ client.on('ready', () => {
 
   let state_list = ['!도움','정상작동','minitop YouTuBe',]
   let state_list_index = 1;
-  let change_delay = 5000; 
+  let change_delay = 5000; //1000이 1초
 
   function changeState() {
     setTimeout(() => {
@@ -101,7 +101,7 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .addField('미니탑')
-      .addField('유튜브', '링크', 'https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA', true)
+      .addField('유튜브', '', true)
       .addField('내용 2', '내용 2', true)
       .addField('내용 3', '내용 3', true)
       .addBlankField()
@@ -257,5 +257,25 @@ async function AutoMsgDelete(message, str, delay = 3000) {
     msg.delete();
   }, delay);
 }
+
+} else if(message.content.startsWith('!주사위')) {
+  let min = 1;
+  let max = 6;
+  let dice_num = parseInt(Math.random() * (max - min) + min);
+  return message.reply('${dice_num}가 나왔습니다!');
+
+
+} else if(message.content.startsWith('!도전'))  {
+  let arr = [
+    '가위',
+    '바위',
+    '보',
+  ]
+  let min = 0;
+  let max = arr.length
+  let index = parseInt(Math.random() * (max - min) + min);
+  return message.reply('${arr[index]}!');
+}
+
 
 client.login(token);
