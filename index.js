@@ -87,22 +87,21 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == 'embed') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+
+  if(message.content == '!민탑') {
+    let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
-      .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setTitle('minitop YouTuBe')
+      .setURL('https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA')
+      .setAuthor('minitop', img, 'http://www.navehttps://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAAr.com')
       .setThumbnail(img)
       .addBlankField()
-      .addField('Inline field title', 'Some value here')
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
+      .addField('유튜브', 'https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA')
+      .addField('트위치', 'https://www.twitch.tv/minltop', true)
+      .addField('디스코드', 'https://discord.com/invite/VmcS8tT', true)
       .addBlankField()
       .setTimestamp()
-      .setFooter('EMBED', img)
+      .setFooter('MINITOP YOUTUBE', img)
 
     message.channel.send(embed)
   } else if(message.content == '!도움') {
