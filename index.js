@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 
-  let state_list = ['!도움','정상작동','MINITOP youtube','https://www.youtube.com/channel/ \n UCzcyni64oA9dNfyHKNNvkAA',]
+  let state_list = ['!도움','정상작동','minitop YouTuBe',]
   let state_list_index = 1;
   let change_delay = 5000; 
 
@@ -56,7 +56,7 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  if(message.content == '!si') {
+  if(message.content == '!봇') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
