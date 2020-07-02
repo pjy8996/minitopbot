@@ -87,6 +87,23 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
+  if(message.content == 'embed') {
+    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let embed = new Discord.RichEmbed()
+      .setTitle('타이틀')
+      .setURL('http://www.naver.com')
+      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('Inline field title', 'Some value here')
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('EMBED', img)
+
   if(message.content == '!민탑') {
     let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let embed = new Discord.RichEmbed()
@@ -220,6 +237,7 @@ client.on('message', (message) => {
         .catch(console.error)
     }
   }
+} 
 });
 
 function checkPermission(message) {
