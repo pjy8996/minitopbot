@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
 const moment = require("moment");
 require("moment-duration-format");
-const welcomeChannelName = "안녕하세요";
+const welcomeChannelName = ":hand_splayed:환양합니다";
 const byeChannelName = "안녕히가세";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
