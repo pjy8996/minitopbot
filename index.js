@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 
-  let state_list = ['!도움 을 쳐보세요!','정상작동','MINITOP youtube',]
+  let state_list = ['!도움 을 쳐보세요!','정상작동','MINITOP youtube','https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA',]
   let state_list_index = 1;
   let change_delay = 3000; 
 
