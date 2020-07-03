@@ -55,7 +55,6 @@ client.on('message', (message) => {
   if(message.content == '!트위치') {
     return message.reply('https://www.twitch.tv/minltop');
   }
-
   if(message.content == '!유튜브') {
     return message.reply('https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA');
   }
@@ -101,7 +100,7 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .addField('미니탑')
-      .addField('유튜브', '', true)
+      .addField('유튜브', '[유튜브 링크 (클릭)](<https://youtu.be/M9Kr6YsDah4>)\n', true)
       .addField('내용 2', '내용 2', true)
       .addField('내용 3', '내용 3', true)
       .addBlankField()
