@@ -10,7 +10,7 @@ const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
+  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, s0tatus: 'online' })
 
   let state_list = ['!도움','정상작동','minitop YouTuBe',]
   let state_list_index = 1;
@@ -90,7 +90,7 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == '!민탑') {
+  if(message.content == '!민탑' , '!미니탑' , '!minitop') {
     let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let embed = new Discord.RichEmbed()
       .setTitle('MINITOP')
@@ -158,7 +158,7 @@ client.on('message', (message) => {
     if(message.member != null) { // 채널에서 공지 쓸 때
       let contents = message.content.slice('!전체공지2'.length);
       let embed = new Discord.RichEmbed()
-        .setAuthor('공지 of 콜라곰 BOT')
+        .setAuthor('MINITOP BOT')
         .setColor('#186de6')
         .setFooter(`MINITOP BOT`)
         .setTimestamp()
@@ -198,7 +198,7 @@ client.on('message', (message) => {
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
-      message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
+      message.channel.send("1부터 99까지의 숫자만 입력해주세요.")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
