@@ -90,7 +90,7 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == '!민탑' , '!미니탑' , '!minitop') {
+  if(message.content == '!민탑') {
     let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let embed = new Discord.RichEmbed()
       .setTitle('MINITOP')
