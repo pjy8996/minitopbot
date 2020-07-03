@@ -99,7 +99,6 @@ client.on('message', (message) => {
       .setDescription('minitop official')
       .setThumbnail(img)
       .addBlankField()
-      .addField('미니탑', 'minitop', true)
       .addField('유튜브', '[유튜브 링크 (클릭)](<https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA>)\n', false)
       .addField('트위치', '[트위치 링크 (클릭)](<https://www.twitch.tv/minltop>)\n', false)
       .addField('디스코드', '[디스코드 링크 (클릭)](<https://discord.com/invite/VmcS8tT>)\n', false)
