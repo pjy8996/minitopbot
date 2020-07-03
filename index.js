@@ -198,17 +198,7 @@ client.on('message', (message) => {
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
-      let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
-      let embed = new Discord.RichEmbed()
-      .setTitle('MINITOP')
-      .setURL('https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png')
-      .setAuthor('minitop BOT', img, 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png')
-      .setDescription('minitop official')
-      .addField('청소 명령어 에러', '1부터 99까지의 숫자만 입력해 주세요', false)
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('MINITOP DISCORD BOT', img)
-
+      message.channel.send("> **청소명령어 에러**\n>**1부터 99까지의 숫자만 입력해주세요.**")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
