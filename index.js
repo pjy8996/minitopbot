@@ -95,7 +95,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('MINITOP')
       .setURL('https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png')
-      .setAuthor(message.author.username, message.author.avatarURL())
+      .setAuthor(message.author.username, message.author.avatarURL) 
       .setDescription('minitop official')
       .setThumbnail(img)
       .addBlankField()
