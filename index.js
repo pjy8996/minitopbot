@@ -10,7 +10,7 @@ const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, s0tatus: 'online' })
+  client.user.setPresence({ game: { name: '!도움' }, s0tatus: 'online' })
 
   let state_list = ['!도움','정상작동','minitop YouTuBe',]
   let state_list_index = 1;
