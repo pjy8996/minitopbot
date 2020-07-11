@@ -107,8 +107,8 @@ client.on('message', (message) => {
       .setFooter('MINITOP DISCORD BOT', img)
 
   }
-  
-    if(message.content == '!민탑') {
+
+    if(message.content == '!efd') {
     let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
     let embed = new Discord.RichEmbed()
       .setTitle('MINITOP')
