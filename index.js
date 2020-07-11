@@ -105,6 +105,22 @@ client.on('message', (message) => {
       .setTimestamp()
       .setFooter('MINITOP DISCORD BOT', img)
 
+      if(message.content == '!신청') {
+        let embed = new Discord.RichEmbed()
+        let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
+        var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
+        embed.setColor('#186de6')
+        embed.setAuthor('minitop 매니져 신청 현황', img)
+        embed.setFooter(`minitop BOT`)
+        embed.addBlankField()
+        embed.addField('ZENON',    `ZENON#0725`, true);
+        embed.addField('곰용', `𝕲𝖔𝖒𝖄𝖔𝖓𝖌#7777`, true);
+        embed.addField('独島は韓国の領土',         `独島は韓国の領土#1070`, true);
+        embed.addField('넹기분굿',       `넹기분굿#3113`, true);
+        embed.addField('[NTF]갓 서니]',   `[NTF]갓 서니]#4846`, true);
+        embed.addField('Draft',         `죄송합니다#7768`, true);
+        }
+
     message.channel.send(embed)
   } else if(message.content == '!도움') {
     let helpImg = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
