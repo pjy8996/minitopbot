@@ -106,6 +106,24 @@ client.on('message', (message) => {
       .setTimestamp()
       .setFooter('MINITOP DISCORD BOT', img)
 
+  }
+  
+    if(message.content == '!민탑') {
+    let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('MINITOP')
+      .setURL('https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png')
+      .setAuthor(message.author.username, message.author.avatarURL) 
+      .setDescription('minitop official')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('유튜브', '[유튜브 링크 (클릭)](<https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA>)\n', false)
+      .addField('트위치', '[트위치 링크 (클릭)](<https://www.twitch.tv/minltop>)\n', false)
+      .addField('디스코드', '[디스코드 링크 (클릭)](<https://discord.com/invite/VmcS8tT>)\n', false)
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('MINITOP DISCORD BOT', img)
+
     message.channel.send(embed)
   } else if(message.content == '!도움') {
     let helpImg = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
