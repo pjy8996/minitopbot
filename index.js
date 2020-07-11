@@ -104,7 +104,7 @@ client.on('message', (message) => {
       .addBlankField()
       .setTimestamp()
       .setFooter('MINITOP DISCORD BOT', img)
-
+  }
       if(message.content == '!신청') {
         let embed = new Discord.RichEmbed()
         let img = 'https://cdn.discordapp.com/attachments/725354694871875604/728138755298295838/minitop.png';
@@ -119,7 +119,7 @@ client.on('message', (message) => {
         embed.addField('넹기분굿',       `넹기분굿#3113`, true);
         embed.addField('[NTF]갓 서니]',   `[NTF]갓 서니]#4846`, true);
         embed.addField('Draft',         `죄송합니다#7768`, true);
-        }
+        
 
     message.channel.send(embed)
   } else if(message.content == '!도움') {
