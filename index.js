@@ -57,9 +57,6 @@ client.on('message', (message) => {
   if(message.content == '!유튜브') {
     return message.reply('https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA');
   }
-  if(message.content == '!test') {
-    return message.reply('https://media.discordapp.net/attachments/732090991963668580/732091003749793852/unknown.png');
-  }
 
   if(message.content == '!system') {
     let embed = new Discord.RichEmbed()
