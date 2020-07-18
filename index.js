@@ -57,9 +57,6 @@ client.on('message', (message) => {
   if(message.content == '!유튜브') {
     return message.reply('https://www.youtube.com/channel/UCzcyni64oA9dNfyHKNNvkAA');
   }
-  if(message.content == '!index') {
-    return message.reply('난 쫄보가 맞아!');
-  }
 
   if(message.content == '!system') {
     let embed = new Discord.RichEmbed()
