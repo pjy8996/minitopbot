@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '!도움' }, s0tatus: 'online' })
 
-  let state_list = ['!도움','정상작동','minitop YouTuBe','환영합니다']
+  let state_list = ['!도움','정상작동','minitop YouTuBe','민탑님 아프지마세요!']
   let state_list_index = 1;
   let change_delay = 5000; //1000이 1초
 
