@@ -3,9 +3,9 @@ const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
 const moment = require("moment");
 require("moment-duration-format");
-const welcomeChannelName = ":hand_splayed:환양합니다";
-const byeChannelName = "안녕히가세";
-const welcomeChannelComment = "어서오세요.";
+const welcomeChannelName = "🖐환영합니다";
+const byeChannelName = "ㄹㅇㄹㅈㄷㄱㄹㄴㅇㅍㄴㄷㄹㄴ";
+const welcomeChannelComment = "님! 안녕하세요!\n**minitop discord** 공식 서버에 오신걸 환영합니다!\n#📰서버안내 에 들어가 **__서버 규칙등 다양한 내용을 확인하세요~!__**";
 const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
