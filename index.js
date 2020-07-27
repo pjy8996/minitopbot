@@ -7,10 +7,69 @@ const welcomeChannelName = "🖐환영합니다";
 const byeChannelName = "ㄹㅇㄹㅈㄷㄱㄹㄴㅇㅍㄴㄷㄹㄴ";
 const welcomeChannelComment = "님! 안녕하세요!\n**minitop discord** 공식 서버에 오신걸 환영합니다!\n서버안내 에서 **__서버 규칙등 다양한 내용을 확인하세요~!__**";
 const byeChannelComment = "안녕히가세요.";
+const cheerio = require("cheerio")
+const request = require("request")
+const cities = [
+    "서울",
+    "부산",
+    "대구",
+    "인천",
+    "광주",
+    "대전",
+    "울산",
+    "세종",
+    "경기",
+    "강원",
+    "충북",
+    "충남",
+    "전북",
+    "전남",
+    "경북",
+    "경남",
+    "제주"
+] 
 
 client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '!도움' }, s0tatus: 'online' })
+
+  let url = "http://ncov.mohw.go.kr/" //코로나바이러스감염증-19(COVID-19)
+  exports.getTotal = (str) => {
+      let Array = []
+      let value = cities.indexOf(str)
+      return new Promise(resolve => {
+          request(url, function(error, response, body) {
+              const $ = cheerio.load(body)
+              if(!str) {
+                  const colArr = $(".num")
+      
+                  let confirm = colArr[0].children[0].next.data
+                  let cure = colArr[1].children[0].data
+                  let curing = colArr[2].children[0].data
+                  let dead = colArr[3].children[0].data
+                  let accumlate = colArr[4].children[0].data
+      
+                  Array.push({ confirm, cure, curing, dead, accumlate })
+                  resolve(Array)
+              } else if(value != -1) {
+                  corona_cities = $(".num")
+                  value = 5 * value
+                  let passnum = 30+value
+  
+                  let confirm = corona_cities[passnum].children[0].data
+                  let cure = corona_cities[passnum+1].children[0].data
+                  let curing = corona_cities[passnum+2].children[0].data
+                  let dead = corona_cities[passnum+3].children[0].data
+                  let incidence = corona_cities[passnum+4].children[0].data
+  
+                  Array.push({ confirm, cure, curing, dead, incidence })
+                  resolve(Array)
+              } else {
+                  throw new Error("없는 지역을 검색할 수 없습니다.")
+              }
+          })
+      })
+  }
 
   let state_list = ['!도움','정상작동','minitop YouTuBe','민탑님 아프지마세요!']
   let state_list_index = 1;
